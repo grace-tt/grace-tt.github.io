@@ -30,4 +30,17 @@ let pokemonlist = [
     }
 ];
 
-console.log(pokemonlist);
+
+/*console.log(pokemonlist);/
+
+/*add for loop to show every name in pokemonlist*/
+for (let i = 0; i < pokemonlist.length; i++) {
+/*if height is over 1.5, then showing 'wow, it is big!'*/
+  if (pokemonlist[i].height > 1.5) {
+    document.write("<br>"+ pokemonlist[i].Name + "\n" + "(height:" + pokemonlist[i].height +")" + " - Wow, it is big!");
+/*if height is less than 1.5, then only showing name and height*/
+  } else {
+    document.write("<br>"+pokemonlist[i].Name + "\n" + "(height:" + pokemonlist[i].height + ")" ); 
+  }
+}
+
