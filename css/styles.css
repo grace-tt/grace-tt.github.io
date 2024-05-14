@@ -25,11 +25,7 @@ body {
 
 
 #modalcontainer {
-  margin: auto;
-  display: inline-block;
-  background: #fff;
-  padding: 15px;
- 
+  display: none;
 }
 
 #modalcontainer.is-visible {
@@ -57,14 +53,19 @@ body {
 
 
 .modal{
-    background-color: #f4f4f4;
-    margin: 30% auto;
-    width:70%;
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
 
 }
 
 
-.button-close {
+.modal-close {
   float: right;
   
   border: 0;
@@ -73,3 +74,7 @@ body {
   text-decoration: underline;
 }
 
+
+.modal p {
+  margin-bottom: 0;
+}

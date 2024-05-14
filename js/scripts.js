@@ -70,41 +70,32 @@ let pokemonRepository = (function () {
   }
 
   function showModal(pokemon) {
-    console.log("test1", pokemon);
-    pokemonRepository.loadDetails(pokemon).then(function () {
-      let modalcontainer = document.querySelector("#modalcontainer");
-      let modal = document.createElement("div");
-      modal.classList.add("modal");
-      modal.innerHTML = `
+    let modalcontainer = document.querySelector("#modalcontainer");
+    modalcontainer.innerHTML = "";
+    let modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    modal.innerHTML = `
       <h1>${pokemon.name}</h1>
       <p>Height: ${pokemon.height}</p>
       <p>Types: ${pokemon.types.map((type) => type.type.name)}</p>   
       <img src="${pokemon.imageUrl}" alt="${pokemon.name}" /> 
       `;
 
-      let closeButtonElement = document.createElement("button");
-      closeButtonElement.classList.add("button-close");
-      closeButtonElement.innerText = "Close";
-      closeButtonElement.addEventListener("click", hideModal);
+    let closeButtonElement = document.createElement("button");
+    closeButtonElement.classList.add("modal-close");
+    closeButtonElement.innerText = "Close";
+    closeButtonElement.addEventListener("click", hideModal);
+    modal.appendChild(closeButtonElement);
 
-      modalcontainer.appendChild(modal);
-      modal.appendChild(closeButtonElement);
+    modalcontainer.appendChild(modal);
+    modalcontainer.classList.add("is-visible");
 
-      modalcontainer.classList.add("is-visible");
-
-      modalcontainer
-        .querySelector(".button-close")
-        .addEventListener("click", function () {
-          modal.remove();
-        });
-
-      /* modalcontainer.addEventListener("click", function (event) {
-          if (event.target === modalcontainer) {
-            modalcontainer.remove();
-          }
-        });
-    */
-    });
+    modalcontainer
+      .querySelector(".modal-close")
+      .addEventListener("click", function () {
+        modal.remove();
+      });
   }
 
   window.addEventListener("keydown", (e) => {
