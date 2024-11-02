@@ -1,83 +1,63 @@
-.button-class {
-    background-color: #b42020;
-    border: none;
-    color:white;
-    padding: 16px 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid #4caf50;
+.container {
+  margin: 10;
+  border: solid 1px;
+  margin-top: 10px;
+  padding: 10px;
+  margin-top: 70px;
+  color: #c248be91;
 }
 
-
-html, 
-body {
-  font-family: Arial, sans-serif;
-}
-
-
-
-#modalcontainer {
-  display: none;
-}
-
-#modalcontainer.is-visible {
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  
-  /* to show it above other content */
-  z-index: 100; 
-  
-  /* to allow scrolling if the screen is not high enough*/
-  overflow: auto; 
-  
-  /* this is used to center the modal */
+  overflow: auto;
+  background-color: rgba(201, 44, 44, 0.4);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--h-font-weight);
+  color: var(--h1-Color);
+}
+
+.header {
+  background-color: var(--header-background-color);
+  height: 60px;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.pokemon-list {
   display: grid;
-  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
-
-
-
-.modal{
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
-
+.pokemon-img {
+  border: #4646a8 solid 1px;
 }
 
-
-.modal-close {
-  float: right;
-  
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
+.button-class:hover {
+  background-color: #d53a3a;
+  color: rgb(39, 17, 117);
+  border: 2px solid #ddd;
 }
 
-.modal h1 {
-  margin-top: 0;
-}
-
-.modal p {
-  margin-bottom: 0;
+.modal-content {
+  margin: 0;
+  border: solid 1px;
+  margin-top: 5px;
+  padding: 5px;
+  margin-top: 60px;
 }
