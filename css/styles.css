@@ -41,11 +41,3 @@ li {
   color: rgb(39, 17, 117);
   border: 2px solid #ddd;
 }
-
-.modal-content {
-  margin: 0;
-  border: solid 1px;
-  margin-top: 5px;
-  padding: 5px;
-  margin-top: 60px;
-}
