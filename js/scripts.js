@@ -2,7 +2,7 @@
 
 let pokemonRepository = (function () {
   let pokemonlist = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=50";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=52";
 
   function add(pokemon) {
     if (

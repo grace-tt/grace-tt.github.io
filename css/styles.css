@@ -29,9 +29,10 @@ li {
 }
 
 .pokemon-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 40px;
+  margin: 10 auto;
+  height: fit-content;
+  grid-gap: 1px;
+  text-align: center;
 }
 
 .pokemon-img {

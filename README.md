@@ -1,5 +1,11 @@
-/* add content in the next task */
-add pokemonlist array;
-using document write in html to show every name and height in the array;
-  1)using for loop; 
-  2)using if else and only showing comments when height is over 1.5;
+# project Summary
+
+This project is a brief introduction about pokemon. It extracts the pokemon detail using API and show its name, height,weight,image,type and abilities by utilizing Bootstrap library to achieve it.
+
+# Process of the project
+
+There is a series of code development in the full stack web development class.
+
+# data source
+
+https://pokeapi.co/api/v2/pokemon/?limit=52
